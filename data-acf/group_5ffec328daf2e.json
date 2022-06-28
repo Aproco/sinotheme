@@ -1,0 +1,510 @@
+{
+    "key": "group_5ffec328daf2e",
+    "title": "Leading page content",
+    "fields": [
+        {
+            "key": "field_5ffec3ac68a1c",
+            "label": "Hide breadcrumb trail",
+            "name": "page_hide_trail",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ffecfb3e4b12",
+            "label": "Leading panel style",
+            "name": "leading_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "leading-full": "Full height panel",
+                "leading-offset-image": "Offset image panel",
+                "leading-splitbg": "Split background image panel",
+                "leading-simple": "Simple heading",
+                "leading-withcopy": "Heading with copy",
+                "leading-newspage": "News page heading"
+            },
+            "default_value": "leading-copy",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5ffed3efdffa1",
+            "label": "Leading image",
+            "name": "leading_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "!=",
+                        "value": "leading-full"
+                    },
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "!=",
+                        "value": "leading-simple"
+                    },
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "!=",
+                        "value": "leading-withcopy"
+                    },
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "!=",
+                        "value": "leading-newspage"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 1200,
+            "max_height": 1200,
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5fff0cd58923f",
+            "label": "Leading image position",
+            "name": "leading_imgpos",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "==",
+                        "value": "leading-offset-image"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "==",
+                        "value": "leading-splitbg"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "img-left": "Image left",
+                "img-right": "Image right"
+            },
+            "default_value": "img-left",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5fff0152e9f9d",
+            "label": "Leading background",
+            "name": "leading_background",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "!=",
+                        "value": "leading-newspage"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_5ffebeae6a9b2"
+            ],
+            "display": "group",
+            "layout": "row",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_5fff0daa7bc53",
+            "label": "Leading section title",
+            "name": "leading_section_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "!=",
+                        "value": "leading-full"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6005544fc1d50",
+            "label": "Enable alternate heading layout",
+            "name": "leading_alt_heading",
+            "type": "true_false",
+            "instructions": "Tick the checkbox to toggle between heading layouts for best fit with the leading content used for this page.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "==",
+                        "value": "leading-offset-image"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "==",
+                        "value": "leading-splitbg"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ffed1d7dff9a",
+            "label": "Leading heading",
+            "name": "leading_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fff23383d02c",
+            "label": "Leading heading maximum width",
+            "name": "leading_heading_maxwidth",
+            "type": "number",
+            "instructions": "Set a maximum width for the main heading here, this option is just here to help neaten the flow of text for aesthetic reasons.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "==",
+                        "value": "leading-offset-image"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "==",
+                        "value": "leading-simple"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5ffed206dff9b",
+            "label": "Leading subheading",
+            "name": "leading_subheading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6006a3720096b",
+            "label": "Leading subheading size",
+            "name": "leading_subheading_size",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "==",
+                        "value": "leading-withcopy"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "smaller": "Small",
+                "mediumer": "Medium",
+                "larger": "Large"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "larger",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5ffed29cdff9c",
+            "label": "Leading copy",
+            "name": "leading_copy",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "==",
+                        "value": "leading-full"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "==",
+                        "value": "leading-withcopy"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "==",
+                        "value": "leading-splitbg"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5ffed79ea3343",
+            "label": "Panel buttons",
+            "name": "panel_buttons",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "!=",
+                        "value": "leading-offset-image"
+                    },
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "!=",
+                        "value": "leading-simple"
+                    },
+                    {
+                        "field": "field_5ffecfb3e4b12",
+                        "operator": "!=",
+                        "value": "leading-withcopy"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add button",
+            "sub_fields": [
+                {
+                    "key": "field_5ffed304dff9e",
+                    "label": "Button link",
+                    "name": "button_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_5ffed327dff9f",
+                    "label": "Button style",
+                    "name": "button_style",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "solid": "Solid",
+                        "outline": "Outline",
+                        "outline downarrow": "Outline with down arrow",
+                        "link-arrow": "Link arrow"
+                    },
+                    "default_value": "solid",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5ffed38adffa0",
+                    "label": "Button colour",
+                    "name": "button_colour",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "yellow": "Yellow",
+                        "red": "Red",
+                        "bluedk": "Navy",
+                        "white": "White"
+                    },
+                    "default_value": "solid",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/contact-page.php"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1611764145
+}
