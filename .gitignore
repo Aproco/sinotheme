@@ -1,0 +1,5 @@
+# Sino theme gitignore rules
+
+# Ignore css mapping
+style.css.map
+.siteflow

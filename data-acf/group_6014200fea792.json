@@ -1,0 +1,93 @@
+{
+    "key": "group_6014200fea792",
+    "title": "Language settings",
+    "fields": [
+        {
+            "key": "field_60142022df22e",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<strong>About this section<\/strong>\r\n\r\nEnter custom urls for language specific versions of this content below. These are used to optimise hreflang tags (for better SEO) and to link the language selector to more relevant pages.\r\n\r\nNote that you can set the site wide language under Site options > Site language settings, the hreflang tag for that language will then default to the current page URL automatically.\r\n\r\nIf a url is not entered for the remaining languages these will default to the home page URL.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6014211ddf22f",
+            "label": "Default language URL - English (GB)",
+            "name": "language_url_en_gb",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
+        },
+        {
+            "key": "field_601421c0df231",
+            "label": "English (US)",
+            "name": "language_url_en_us",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
+        },
+        {
+            "key": "field_60142200df232",
+            "label": "Deutsch",
+            "name": "language_url_de",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 100,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1627912568
+}
